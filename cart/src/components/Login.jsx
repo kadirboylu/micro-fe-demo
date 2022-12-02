@@ -12,7 +12,7 @@ export default function Login() {
   if (loggedIn) return null;
 
   return (
-    <>
+    <div className="select-none">
       <span onClick={() => setShowLogin(!showLogin)}>
         <i className="ri-fingerprint-line text-2xl" id="showlogin"></i>
       </span>
@@ -21,8 +21,8 @@ export default function Login() {
           className="absolute p-5 border-2 border-gray-700 bg-white rounded-md text-black"
           style={{
             width: 300,
-            top: "2rem",
-            //left: -250,
+            top: "4rem",
+            right: 20,
           }}
         >
           <label htmlFor="username">Username</label>
@@ -51,6 +51,6 @@ export default function Login() {
           </button>
         </div>
       )}
-    </>
+    </div>
   );
 }

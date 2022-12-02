@@ -11,7 +11,7 @@ import HomeContent from "./components/HomeContent";
 const App = () => (
   <div>
     <Header />
-    <div className="content bg-gray-50">
+    <div className="content bg-gray-100">
       <HomeContent />
     </div>
     <Footer />

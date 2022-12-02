@@ -17,7 +17,7 @@ export default function MiniCart() {
   if (!items) return null;
 
   return (
-    <>
+    <div className="select-none">
       <span onClick={() => setShowCart(!showCart)} id="showcart_span">
         <i className="ri-shopping-cart-2-fill text-2xl" id="showcart"></i>
         {items.length}
@@ -28,8 +28,8 @@ export default function MiniCart() {
             className="absolute p-5 border-2 border-gray-700 bg-white rounded-md text-black"
             style={{
               width: 300,
-              top: "2rem",
-              //left: -250,
+              top: "4rem",
+              right: 20,
             }}
           >
             <div
@@ -79,6 +79,6 @@ export default function MiniCart() {
           </div>
         </>
       )}
-    </>
+    </div>
   );
 }
