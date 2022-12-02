@@ -23,7 +23,7 @@ export default function PDPContent() {
     );
 
   return (
-    <div className="text-xl md:mx-5 py-4 flex flex-col items-center">
+    <div className="text-xl md:mx-5 p-4 flex flex-col items-center">
       <img src={product.image} alt={product.name} />
       <div className="flex mt-2 flex-col items-center md:flex-row">
         <h1 className="text-2xl text-center font-bold">{product.name}</h1>

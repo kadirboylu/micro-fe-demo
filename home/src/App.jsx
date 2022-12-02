@@ -9,9 +9,9 @@ import Footer from "./components/Footer";
 import HomeContent from "./components/HomeContent";
 
 const App = () => (
-  <div className="mx-auto max-w-6xl">
+  <div>
     <Header />
-    <div className="content">
+    <div className="content bg-gray-50">
       <HomeContent />
     </div>
     <Footer />

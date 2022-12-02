@@ -10,11 +10,10 @@ import CartContent from "./components/CartContent";
 import Login from "./components/Login";
 
 const App = () => (
-  <div className="mx-auto max-w-6xl">
+  <div>
     <Header />
-    <div className="content">
+    <div className="content bg-gray-100">
       <CartContent />
-      <Login />
     </div>
     <Footer />
   </div>

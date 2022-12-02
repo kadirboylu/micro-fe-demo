@@ -11,9 +11,9 @@ import PDPContent from "./components/PDPContent";
 
 const App = () => (
   <Router>
-    <div className="mx-auto max-w-6xl">
+    <div>
       <Header />
-      <div className="content">
+      <div className="content bg-gray-100">
         <Switch>
           <Route path="/product/:id" component={PDPContent} />
         </Switch>
