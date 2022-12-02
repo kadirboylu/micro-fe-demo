@@ -47,6 +47,7 @@ module.exports = {
       exposes: {
         "./components/Header": "./src/components/Header.jsx",
         "./components/Footer": "./src/components/Footer.jsx",
+        "./products": "./src/products.js",
       },
       shared: {
         ...deps,

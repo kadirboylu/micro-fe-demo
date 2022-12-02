@@ -4,7 +4,7 @@ export const getProducts = () => {
   return fetch(`${API_SERVER}/products`).then((response) => response.json());
 };
 
-export const getProductsById = (id) => {
+export const getProductById = (id) => {
   return fetch(`${API_SERVER}/products/${id}`).then((response) =>
     response.json()
   );
