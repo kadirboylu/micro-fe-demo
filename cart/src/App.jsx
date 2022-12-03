@@ -4,17 +4,11 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import "remixicon/fonts/remixicon.css";
 
-import Header from "home/components/Header";
-import Footer from "home/components/Footer";
 import CartContent from "./components/CartContent";
 
 const App = () => (
   <div>
-    <Header />
-    <div className="content bg-gray-100">
-      <CartContent />
-    </div>
-    <Footer />
+    <CartContent />
   </div>
 );
 ReactDOM.render(<App />, document.getElementById("app"));
