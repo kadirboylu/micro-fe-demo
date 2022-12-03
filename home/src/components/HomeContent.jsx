@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 import { getProducts, currency } from "../products";
+import { addToCart, useLoggedIn } from "cart/cart";
 
 export default function HomeContent() {
+  const loggedIn = useLoggedIn();
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -23,6 +25,14 @@ export default function HomeContent() {
             </div>
             <div>{currency.format(product.price)}</div>
           </div>
+          {loggedIn && (
+            <button
+              onClick={() => addToCart(product.id)}
+              className="bg-blue-500 hover:bg-blue-700 text-white mt-2 p-2 rounded-md"
+            >
+              Add to Cart
+            </button>
+          )}
         </div>
       ))}
     </div>
