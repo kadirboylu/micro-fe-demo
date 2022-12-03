@@ -17,17 +17,21 @@ export default function HomeContent() {
       {products.map((product) => (
         <div
           key={product.id}
-          className="w-64 bg-gray-50 shadow-lg flex flex-col items-center p-2 border-2 rounded-md"
+          className="w-72 bg-gray-50 shadow-lg flex flex-col items-between justify-between p-2 border-2 rounded-md"
         >
-          <Link to={`/product/${product.id}`}>
+          <Link
+            to={`/product/${product.id}`}
+            className="flex flex-col items-center"
+          >
             <img src={product.image} alt={product.name} />
-          </Link>
-          <div className="flex flex-col mt-2 text-center">
-            <div className="font-bold">
-              <Link to={`/product/${product.id}`}>{product.name}</Link>
+
+            <div className="flex flex-col mt-2 text-center">
+              <div className="font-bold">
+                <p>{product.name}</p>
+              </div>
+              <div>{currency.format(product.price)}</div>
             </div>
-            <div>{currency.format(product.price)}</div>
-          </div>
+          </Link>
           {loggedIn && (
             <button
               onClick={() => addToCart(product.id)}
