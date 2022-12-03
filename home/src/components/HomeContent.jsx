@@ -28,7 +28,7 @@ export default function HomeContent() {
           {loggedIn && (
             <button
               onClick={() => addToCart(product.id)}
-              className="bg-blue-500 hover:bg-blue-700 text-white mt-2 p-2 rounded-md"
+              className="btn primary mt-2"
             >
               Add to Cart
             </button>

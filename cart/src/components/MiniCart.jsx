@@ -16,6 +16,33 @@ export default function MiniCart() {
 
   if (!items) return null;
 
+  if (!items?.length) {
+    return (
+      <div className="select-none">
+        <span
+          onClick={() => setShowCart(!showCart)}
+          id="showcart_span"
+          className="cursor-pointer"
+        >
+          <i className="ri-shopping-cart-2-fill text-2xl" id="showcart"></i>
+          {items.reduce((sum, item) => sum + item.quantity, 0)}
+        </span>
+        {showCart && (
+          <div
+            className="absolute p-5 border-2 border-gray-700 bg-white rounded-md text-black"
+            style={{
+              width: 300,
+              top: "4rem",
+              right: 20,
+            }}
+          >
+            <div className="text-center">Your cart is empty</div>
+          </div>
+        )}
+      </div>
+    );
+  }
+
   return (
     <div className="select-none">
       <span
@@ -55,7 +82,7 @@ export default function MiniCart() {
               <div></div>
               <div></div>
               <div></div>
-              <div>
+              <div className="font-bold">
                 {currency.format(
                   items.reduce((a, v) => a + v.quantity * v.price, 0)
                 )}
@@ -65,17 +92,14 @@ export default function MiniCart() {
               <div className="flex-grow">
                 <button
                   id="clearcart"
-                  className="bg-white border border-red-700 text-red-600 py-2 px-5 rounded-md text-sm"
+                  className="btn danger"
                   onClick={clearCart}
                 >
                   Clear Cart
                 </button>
               </div>
               <div className="flex-end">
-                <button
-                  className="bg-green-600 border border-green-700 text-white py-2 px-5 rounded-md text-sm"
-                  onClick={clearCart}
-                >
+                <button className="btn success" onClick={clearCart}>
                   Checkout
                 </button>
               </div>

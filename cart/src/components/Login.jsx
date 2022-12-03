@@ -25,7 +25,9 @@ export default function Login() {
             right: 20,
           }}
         >
-          <label htmlFor="username">Username</label>
+          <label className="font-bold" htmlFor="username">
+            Username
+          </label>
           <input
             type="text"
             name="username"
@@ -34,7 +36,9 @@ export default function Login() {
             onChange={(evt) => setUsername(evt.target.value)}
             className="border text-sm border-gray-400 p-2 rounded-md w-full mb-3"
           />
-          <label htmlFor="password">Password</label>
+          <label className="font-bold" htmlFor="password">
+            Password
+          </label>
           <input
             type="password"
             name="password"
@@ -43,7 +47,7 @@ export default function Login() {
             className="border text-sm border-gray-400 p-2 rounded-md w-full"
           />
           <button
-            className="bg-green-600 border border-green-700 text-white py-2 px-5 rounded-md text-sm mt-5"
+            className="btn success mt-3"
             onClick={() => login(username, password)}
             id="loginbtn"
           >
