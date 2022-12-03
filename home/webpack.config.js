@@ -53,6 +53,7 @@ module.exports = {
         "./components/Header": "./src/components/Header.jsx",
         "./components/Footer": "./src/components/Footer.jsx",
         "./products": "./src/products.js",
+        "./components/HomeContent": "./src/components/HomeContent.jsx",
       },
       shared: {
         ...deps,

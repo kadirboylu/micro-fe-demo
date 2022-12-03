@@ -4,17 +4,7 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import "remixicon/fonts/remixicon.css";
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import HomeContent from "./components/HomeContent";
+import MainLayout from "./components/MainLayout";
 
-const App = () => (
-  <div>
-    <Header />
-    <div className="content bg-gray-100">
-      <HomeContent />
-    </div>
-    <Footer />
-  </div>
-);
+const App = () => <MainLayout />;
 ReactDOM.render(<App />, document.getElementById("app"));
