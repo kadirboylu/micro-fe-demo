@@ -13,7 +13,7 @@ export default function Login() {
 
   return (
     <div className="select-none">
-      <span onClick={() => setShowLogin(!showLogin)}>
+      <span className="cursor-pointer" onClick={() => setShowLogin(!showLogin)}>
         <i className="ri-fingerprint-line text-2xl" id="showlogin"></i>
       </span>
       {showLogin && (

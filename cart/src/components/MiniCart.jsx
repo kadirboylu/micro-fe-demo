@@ -18,9 +18,13 @@ export default function MiniCart() {
 
   return (
     <div className="select-none">
-      <span onClick={() => setShowCart(!showCart)} id="showcart_span">
+      <span
+        onClick={() => setShowCart(!showCart)}
+        id="showcart_span"
+        className="cursor-pointer"
+      >
         <i className="ri-shopping-cart-2-fill text-2xl" id="showcart"></i>
-        {items.length}
+        {items.reduce((sum, item) => sum + item.quantity, 0)}
       </span>
       {showCart && (
         <>
