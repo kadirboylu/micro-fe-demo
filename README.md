@@ -19,3 +19,5 @@ This project has five parts: `home`, `cart`, `pdp`, `addtocart` and `server`. Ea
 pnpm i
 pnpm start
 ```
+
+After running the above commands, you should be able to access the app at `http://localhost:3000`. Project has 2 users: `kadirboylu` and `johndoe` with the same password (`123`) for both. Anytime you restart the `server`, the cart will be reset and users cart will be initialized with default values.
