@@ -13,7 +13,7 @@ export default ({ id }) => {
 
   return (
     <Show when={loggedIn()}>
-      <button onClick={() => addToCart(id)} class="btn danger">
+      <button onClick={() => addToCart(id)} class="btn success">
         Add to Cart
       </button>
     </Show>
