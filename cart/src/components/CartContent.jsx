@@ -53,17 +53,13 @@ export default function CartContent() {
           {currency.format(items.reduce((a, v) => a + v.quantity * v.price, 0))}
         </div>
       </div>
-      <div className="flex justify-end gap-2 mr-4">
-        <div>
-          <button id="clearcart" className="btn danger" onClick={clearCart}>
-            Clear Cart
-          </button>
-        </div>
-        <div>
-          <button className="btn success" onClick={clearCart}>
-            Checkout
-          </button>
-        </div>
+      <div className="flex justify-end gap-2 mr-4 mb-2">
+        <button id="clearcart" className="btn danger" onClick={clearCart}>
+          Clear Cart
+        </button>
+        <button className="btn success " onClick={clearCart}>
+          Checkout
+        </button>
       </div>
     </div>
   );
